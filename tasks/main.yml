@@ -1,18 +1,5 @@
 ---
 # tasks file for nginx
-
- - name: install Docker Engine on Amazon Linux 
-   shell: amazon-linux-extras install -y docker
-   
- - name: Install docker-py
-   pip:
-     name: docker
-
- - name: start Docker
-   systemd:
-     name: docker
-     state: started
-     enabled: yes
      
  - name: generate nginx.conf
    template:
