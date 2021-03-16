@@ -1,0 +1,17 @@
+http {
+  upstream app {
+    server {{ansible_host}}:5001;
+    server {{ansible_host}}:5002;
+    server {{ansible_host}}:5003;
+  }
+
+  server {
+    listen 80;
+
+    location / {
+      proxy_pass http://app;
+    }
+  }
+}
+
+events { }
