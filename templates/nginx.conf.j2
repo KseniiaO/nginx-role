@@ -1,8 +1,8 @@
 http {
   upstream app {
-    server {{ansible_host}}:5001;
-    server {{ansible_host}}:5002;
-    server {{ansible_host}}:5003;
+    server {{host}}:5001;
+    server {{host}}:5002;
+    server {{host}}:5003;
   }
 
   server {
